@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div style="text-align:center">
+        <img width="100" alt="Logo" src="assets/logo1.png">
+      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/nuestra']">Nosotros <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/servicios']">Servicios</a>
+      </li>
+    </ul>
+    
+  </div>
+ 
+    <form class="form-inline my-2 my-lg-0">
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="Login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Iniciar sesion
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button"[routerLink]="['/login']">Soy Cliente</button>
+              <button class="dropdown-item" type="button"[routerLink]="['/login-conductor']">Soy Conductor</button>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="Registrarme" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Registrarme
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button" [routerLink]="['/registrar']">Cliente</button>
+                <button class="dropdown-item" type="button" [routerLink]="['/registrar-condu6ctor']">Conductor</button>
+                
+              </div>
+            </div>
+      
+    </form>
+</nav>
+
+
+
+<router-outlet></router-outlet>

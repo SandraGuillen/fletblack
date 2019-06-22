@@ -1,0 +1,21 @@
+<div class="col-md-4" *ngFor='let conductor of conductores'>
+
+
+  <div class="card text-center">
+
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+      {{conductor.nombrec}} {{conductor.placa}}
+      <button class="btn btn-danger" (click)="delete(conductor.placa)">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+
+
+    <div class="card-body">
+
+      <a class="btn btn-info btn-block text-white" [routerLink]="['/conductor/edit', conductor.placa]">EDITAR CONDUCTOR</a>
+    </div>
+
+  </div>
+
+</div>

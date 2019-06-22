@@ -1,0 +1,41 @@
+
+<form style = "margin: 100px 300px 100px">
+  <div style="text-align: center">
+<h4 >Bienvenido a FletBlack</h4>
+</div>
+ 
+    <div class = "form-group">
+        <div>
+            <div class="form-group col-xs-6">
+              <label for="inputImei">Ingresa IMEI de tu dispositivo movil</label>
+              <input type="text" class="form-control" name="imeic" placeholder="Marcar *#06# para conocer tu IMEI" [(ngModel)]="conductor.imeic">
+            </div>
+          </div>
+
+          <div>
+              <div class="form-group col-xs-6">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre completo" [(ngModel)]="conductor.nombrec">
+              </div>
+            </div>
+      
+      <div class="form-group col-xs-12">
+        <label for="inputCelular">Placa</label>
+        <input type="email" class="form-control" name="placa" placeholder="Ingresa la placa de tu vehiculo" [(ngModel)]="conductor.placa">
+      </div>
+      <div class="form-group col-xs-6">
+        <label for="inputPassword4">Contraseña</label>
+        <input type="password" class="form-control" name="clave" placeholder="Ingresa tu contraseña" [(ngModel)]="conductor.clave">
+      </div>
+    </div>
+
+    
+            
+    <button class="btn btn-dark" (click)="save()">Registrarme</button>
+  </form>
+
+  <div class="col-md-4">
+      <div class="card">    
+        <h3>{{conductor.nombrec}} {{conductor.placa}}</h3>
+      </div>
+    </div>
